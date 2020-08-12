@@ -1,0 +1,190 @@
+.banner {
+    margin-bottom: 60px;
+
+    @include mobile() {
+        width: 100%;
+        margin-bottom: 0;
+    }
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+    @include pad() {
+        flex-wrap: wrap;
+    }
+}
+
+.sidebar {
+    width: 30%;
+
+    h3 {
+        font-size: $font-l;
+        font-weight: 700;
+        background: $text-primary;
+        color: $text-light;
+        padding: 16px 0;
+    }
+
+    a {
+        display: block;
+        font-size: $font-l;
+        font-weight: 700;
+        border: 1px solid $text-light;
+        padding: 16px 0;
+
+        &:hover {
+            background: $text-light;
+        }
+    }
+
+    @include pad() {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        li {
+            width: 50%;
+            margin: 0;
+        }
+    }
+
+    @include mobile() {
+        li {
+            width: 100%;
+        }
+    }
+}
+
+.product {
+    width: 67%;
+    margin-bottom: 10px;
+
+    @include pad() {
+        width: 100%;
+        margin: 0 5% 5% 5%;
+    }
+}
+
+.productList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.Items {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    position: relative;
+    margin-bottom: 20px;
+
+    .like {
+        position: absolute;
+        top: 19px;
+        right: 22px;
+    }
+
+    .featured {
+        position: absolute;
+        top: 0;
+        left: 20px;
+        padding: 10px;
+        font-weight: 600;
+        writing-mode: vertical-lr;
+        letter-spacing: 5px;
+        background: $text-primary;
+        color: $text-light;
+    }
+
+    @include pad() {
+        width: 46%;
+    }
+
+    @include mobile() {
+        width: 100%;
+    }
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+
+    h3 {
+        border-left: 1px solid $text-light;
+        border-top: 1px solid $text-light;
+        border-bottom: 1px solid $text-light;
+        font-size: $font-m;
+        font-weight: 500;
+        width: 58%;
+        padding: 19px 0;
+    }
+
+    span {
+        border: 1px solid $text-light;
+        font-size: $font-m;
+        font-weight: 700;
+        width: 42%;
+        padding: 14px 0;
+    }
+}
+
+.addCart {
+    background: $text-light;
+    border: 1px solid $text-light;
+    font-size: $font-l;
+    font-weight: 900;
+    width: 100%;
+    padding: 16px;
+    cursor: pointer;
+
+    &:hover {
+        background: $text-primary;
+        color: $text-light;
+    }
+}
+
+.page {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 60px;
+
+    ul {
+        display: flex;
+        align-items: center;
+    }
+
+    &-Number a {
+        display: block;
+        font-size: $font-m;
+        border: 0.5px solid $text-light;
+        padding: 16px 24px;
+
+        &:hover {
+            background: $text-primary;
+            color: $text-light;
+        }
+    }
+
+    @include pad() {
+        justify-content: center;
+    }
+}
+
+.arrow a {
+    display: block;
+    border: 0.5px solid $text-light;
+    padding: 17px;
+
+    &:hover {
+        background: $text-primary;
+        color: $text-light;
+    }
+}

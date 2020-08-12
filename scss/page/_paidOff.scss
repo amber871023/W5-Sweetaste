@@ -1,0 +1,86 @@
+.banner-paidOff {
+
+    background-image: url(https://bit.ly/2P7GhNd);
+    background-size: cover;
+    height: 460px;
+    background-position: center, center;
+    background-repeat: no-repeat;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @include pad() {
+        margin-bottom: 60px;
+    }
+
+    a {
+        display: block;
+        background-color: $text-secondary;
+        padding: 17px;
+        width: 32%;
+        font-size: $font-l;
+        font-weight: 700;
+        text-align: center;
+
+        &:hover {
+            background: $text-primary;
+            color: $text-secondary;
+        }
+
+        @include mobile() {
+            padding: 19px 139px 13px 140px;
+
+            &:hover {
+                background-color: $text-light;
+                color: $text-primary;
+            }
+        }
+    }
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        position: relative;
+        margin-top: 130px;
+        margin-bottom: 32px;
+    }
+
+    .material-icons {
+        font-size: 20px;
+    }
+
+    .hr-1 {
+        border-top: 1.5px solid$text-primary;
+        position: absolute;
+        width: 36%;
+        left: 18px;
+        top: 0px;
+    }
+
+    .hr-2 {
+        border-top: 1.5px solid$text-primary;
+        position: absolute;
+        width: 36%;
+        right: 9.5%;
+        top: 0px;
+    }
+
+    h3 {
+        align-items: center;
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 51px;
+
+        @include mobile() {
+            margin-bottom: 209px;
+        }
+    }
+}

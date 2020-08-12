@@ -1,0 +1,260 @@
+.invoice {
+    display: flex;
+    justify-content: space-between;
+    max-width: 780px;
+    margin: 0 auto;
+
+    .conform {
+        display: block;
+        color: $text-primary;
+        font-size: $font-l;
+        font-weight: 700;
+        background: $text-secondary;
+        padding: 16px;
+        text-align: center;
+
+        &:hover {
+            background: $text-li;
+            color: $text-secondary;
+        }
+    }
+}
+
+.information {
+    background: $text-primary;
+    height: 100%;
+    width: 59%;
+
+    @include mobile() {
+        width: 100%;
+    }
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 40px;
+
+    @include mobile() {
+        margin: 30px;
+    }
+
+    h3 {
+        color: $text-light;
+        font-size: 36px;
+        font-weight: 700;
+        width: 50%;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+        position: relative;
+    }
+
+    .material-icons {
+        font-size: 20px;
+        color: $text-light;
+    }
+
+    .hr-1 {
+        border-top: 1px $text-light;
+        position: absolute;
+        width: 36%;
+        left: 18px;
+        top: 20%;
+    }
+
+    .hr-2 {
+        border-top: 1px $text-light;
+        position: absolute;
+        width: 36%;
+        right: 18px;
+        top: 20%;
+    }
+
+
+}
+
+.invoType {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 40px 30px 40px;
+
+    @include mobile() {
+        margin: 0px 30px 30px 30px;
+    }
+
+    a {
+        display: block;
+        width: 50%;
+        color: $text-light;
+        font-size: $font-m;
+        font-weight: 600;
+        text-align: center;
+        border: 1px solid $text-light;
+        padding: 14px;
+
+        &:hover {
+            background: $text-light;
+            color: $text-primary;
+        }
+
+        @include mobile() {
+            padding: 14px;
+        }
+    }
+}
+
+.invoForm {
+    margin: 0 40px 14px 40px;
+
+    @include mobile() {
+        margin: 0px 30px 14px 30px;
+    }
+
+    label {
+        color: $text-light;
+        font-size: $font-m;
+        font-weight: 500;
+    }
+
+
+    input {
+        border: none;
+        width: 100%;
+        color: $text-li;
+        background: $text-light;
+        padding: 17px 20px;
+        margin-top: 8px;
+        margin-bottom: 16px;
+    }
+}
+
+.order {
+    width: 38.4%;
+
+    @include mobile() {
+        display: none;
+    }
+}
+
+.orderDetail {
+    margin-bottom: 20px;
+    border: 1px solid $text-light;
+
+    h3 {
+        text-align: center;
+        color: $text-li;
+        font-size: $font-l;
+        font-weight: 700;
+        background: $text-light;
+        padding: 16px 0;
+    }
+
+    ul {
+        margin: 16px 20px;
+    }
+
+    li {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+
+        h4 {
+            color: $text-li;
+        }
+
+        p {
+            color: $text-li;
+        }
+    }
+
+    .fare {
+        margin-bottom: 16px;
+    }
+
+    .total {
+        display: flex;
+        justify-content: space-between;
+        font-size: $font-m;
+        font-weight: 600;
+    }
+}
+
+
+.orderList {
+    border: 1px solid $text-light;
+    margin-bottom: 60px;
+
+    h3 {
+        text-align: center;
+        color: $text-li;
+        font-size: $font-l;
+        font-weight: 700;
+        background: $text-light;
+        padding: 16px 0;
+    }
+
+    ul {
+        margin: 16px 20px;
+    }
+
+    .list {
+        display: flex;
+        justify-content: space-between;
+        width: 120px;
+        height: 80px;
+        margin: 0 20px 16px 0;
+
+        &:nth-child(1) {
+            background: url(https://bit.ly/2QvsT63);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            text-indent: 101%;
+            white-space: nowrap;
+        }
+
+
+        &:nth-child(2) {
+            background: url(https://bit.ly/2zBDAxX);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            text-indent: 101%;
+            white-space: nowrap;
+
+        }
+
+        &:nth-child(3) {
+            background: url(https://bit.ly/2zKOP7w);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            text-indent: 101%;
+            white-space: nowrap;
+
+        }
+
+        &:nth-child(4) {
+            background: url(https://bit.ly/2QbVsVR);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            text-indent: 101%;
+            white-space: nowrap;
+        }
+
+        li {
+            color: $text-li;
+        }
+
+        .Price {
+            font-size: $font-m;
+            font-weight: 600;
+        }
+    }
+}

@@ -1,0 +1,273 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 36px 0;
+    position: relative;
+
+    @include pad() {
+        .active {
+            max-height: 200px;
+        }
+    }
+
+    @include mobile() {
+        justify-content: space-between;
+    }
+}
+
+.burgerMenu {
+    display: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    @include pad() {
+        display: block;
+        padding: 0 30px;
+
+        &:focus {
+            outline: 0;
+        }
+    }
+}
+
+.logo {
+    display: block;
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-all-dark.svg);
+    width: 220px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+
+    @include pad() {
+        background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logotype-sm-dark.svg);
+        width: 150px;
+        height: 23px;
+    }
+}
+
+.navbar-collapse {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    max-height: 0px;
+
+    @include pad() {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        transition: all 0.8s;
+        overflow: hidden;
+        background: white;
+        flex-direction: column;
+
+        .navText {
+            &:hover {
+                background-color: $text-light;
+            }
+        }
+    }
+
+    a {
+        display: block;
+        font-weight: 700;
+        padding: 5px 20px;
+
+        &:hover {
+            background: $text-light;
+            border-left: 2px solid $text-primary;
+            padding: 10px;
+        }
+
+        @include pad() {
+            padding: 10px 0;
+            text-align: center;
+
+            &:hover {
+                background: $text-light;
+                border-left: 2px solid $text-primary;
+                border-right: 2px solid $text-primary;
+                padding: 0px 10px 0px 10px;
+            }
+        }
+    }
+}
+
+.cart {
+    display: block;
+    padding: 5px 20px;
+
+    &:hover {
+        background: $text-light;
+        border-left: 2px solid $text-primary;
+    }
+}
+
+//footer-subscribe
+.subscribe {
+    background: $text-primary;
+
+    @include mobile() {
+        max-width: 375px;
+        margin: 0 auto;
+    }
+
+    &-inner {
+        display: flex;
+        justify-content: space-around;
+
+        @include pad() {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+.inner {
+    max-width: 780px;
+    margin: 0 auto;
+
+    @include pad() {
+        max-width: 75%;
+    }
+
+    @include mobile() {
+        max-width: 85%;
+    }
+
+}
+
+.subTitle {
+    display: flex;
+    align-items: center;
+
+    @include pad() {
+        margin-top: 30px;
+    }
+
+    p {
+        color: $text-light;
+        padding-left: 20px;
+        font-size: $font-l;
+    }
+}
+
+.subInput {
+    display: flex;
+    padding: 30px 0;
+    position: relative;
+    width: 35%;
+
+    @include pad() {
+        width: 70%;
+    }
+
+    .email_icon {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translate(-50%, -50%);
+    }
+
+    .submit {
+        background-color: $text-secondary;
+        border: none;
+        cursor: pointer;
+        padding: 16px 20px;
+        line-height: 0;
+        position: absolute;
+        right: -20%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.inputText {
+    background-color: $text-light;
+    border: none;
+    display: block;
+    width: 100%;
+    padding: 20px 30px 20px 35px;
+}
+
+.form {
+    display: flex;
+}
+
+//footer-footer
+.footer {
+    background: $text-light;
+
+    @include mobile() {
+        max-width: 375px;
+        margin: 0 auto;
+        padding-left: 30px;
+        padding-bottom: 30px;
+    }
+
+    &-inner {
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 30px;
+
+        @include mobile() {
+            flex-direction: column;
+        }
+    }
+
+    &-logo {
+        margin-bottom: 115px;
+
+        @include mobile() {
+            margin-bottom: 39.5px;
+        }
+    }
+
+    &-Info {
+        display: flex;
+        flex-direction: column;
+
+        li {
+            font-weight: 600;
+        }
+    }
+
+    .slogan {
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+            writing-mode: vertical-rl;
+            font-size: $font-m;
+            letter-spacing: 5px;
+            font-weight: 600;
+            margin-bottom: 50px;
+
+            @include mobile() {
+                display: none;
+            }
+        }
+    }
+}
+
+.link {
+    display: flex;
+    margin: 30px 0;
+
+    @include mobile() {
+        margin: 37px 0 23px 0;
+    }
+
+    a img {
+        margin-right: 8px;
+    }
+}
